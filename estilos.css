@@ -60,9 +60,14 @@ a:active {
 
 #menu-de-navegacao ul {
   margin-bottom: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
 
-
+#menu-de-navegacao ul li{
+  display: inline-block;
+  margin: auto 20px;
+}
 
 /* --- Conteúdo principal da página --- */
 #conteudo-principal {
@@ -133,7 +138,14 @@ a:active {
   display: inline-block;
 }
 
-
+.novidade::before {
+  content: "Novidade!";
+  display: inline-block;
+  background: blue;
+  padding: 7px;
+  border-radius: 50%;
+  margin: auto;
+}
 
 
 /* --- Principal >> Nuvem de tags --- */
@@ -147,6 +159,7 @@ a:active {
   background-size: 300px;
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
+  box-sizing: border-box;
 }
 
 #tags h1 {
@@ -164,19 +177,28 @@ a:active {
   background-color: orange;
   color: white;
   text-shadow: 1px 1px black;
+  cursor: pointer;
 }
 
-.tag-2 {
+.tag-1:active {
+  position: relative;
+  top: -2px; 
+  left: -2px;
+}
+
+.tag-2:active {
   font-size: 125%;
+  position: relative;
+  top: -2px; 
+  left: -2px;
 }
 
-.tag-3 {
+.tag-3:active {
   font-size: 150%;
+  position: relative;
+  top: -2px; 
+  left: -2px;
 }
-
-
-
-
 
 /* --- Rodapé --- */
 #rodape {
@@ -188,10 +210,6 @@ a:active {
 #rodape .logo-rodape {
   margin-right: 2em;
 }
-
-
-
-
 
 /* --- Vídeo --- */
 .backdrop {
