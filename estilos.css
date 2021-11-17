@@ -77,15 +77,20 @@ a:active {
 }
 
 
-
-
 /* --- Principal >> Postagens principais --- */
 #posts-principais {
-  padding-top: 1.5em;
+  padding-top: 1.5em;  
 }
 
 #posts-principais h1 {
   margin-bottom: 1em;
+}
+
+#posts-principais h2 {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
 }
 
 #posts-principais .post {
@@ -94,6 +99,7 @@ a:active {
   margin-left: 2.5%;
   margin-right: 2.5%;
   display: inline-block;
+  position: relative;
 }
 
 #posts-principais .post .titulo {
@@ -107,8 +113,6 @@ a:active {
   border: 6px solid white;
   margin-bottom: .5em;
 }
-
-
 
 
 /* --- Principal >> Últimas postagens --- */
@@ -150,6 +154,7 @@ a:active {
 
 /* --- Principal >> Nuvem de tags --- */
 #tags {
+  position: sticky;
   float: right;
   width: 300px;
   padding: 15px;
@@ -276,4 +281,15 @@ a:active {
   color: black;
   border-color: currentColor;
   box-shadow: none;
+}
+
+.boo {
+  position: sticky;
+  opacity: 1;
+  width: 40px;
+  transition: all 200ms ease;
+}
+
+.boo:hover {
+  opacity: 0;
 }
